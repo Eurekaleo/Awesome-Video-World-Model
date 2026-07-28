@@ -1,0 +1,70 @@
+name: New paper suggestion
+description: Suggest a representative work for the survey collection
+title: "[Paper] "
+labels:
+  - literature
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Paper title
+      placeholder: Exact title as published
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Paper URL
+      description: Prefer the publisher page or arXiv abstract page.
+      placeholder: https://arxiv.org/abs/...
+    validations:
+      required: true
+
+  - type: input
+    id: venue
+    attributes:
+      label: Venue and year
+      placeholder: CVPR 2026 or arXiv 2026
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operation
+    attributes:
+      label: Primary survey operation
+      options:
+        - Reading
+        - Writing
+        - Sharing
+        - Interacting
+        - Foundations
+        - Open frontiers
+    validations:
+      required: true
+
+  - type: input
+    id: topic
+    attributes:
+      label: Technical topic
+      placeholder: Video representation learning, controllable generation, memory, evaluation, ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Why this work belongs in the survey
+      description: State its distinct technical contribution and why it is representative.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched the current collection and did not find this work.
+          required: true
+        - label: The metadata above matches the paper's authoritative record.
+          required: true

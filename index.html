@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="A survey and curated literature collection for video foundation models through the lens of world modeling."
+    >
+    <meta name="theme-color" content="#18232a">
+    <meta property="og:type" content="website">
+    <meta
+      property="og:title"
+      content="Reading, Writing, Sharing, and Interacting with the World through Video"
+    >
+    <meta
+      property="og:description"
+      content="Explore 504 references across video understanding, generation, unified models, and video world models."
+    >
+    <meta property="og:image" content="assets/figures/four-operations.png">
+    <title>Video Foundation Models through the World-Modeling Lens</title>
+    <link rel="icon" href="assets/site-icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="site/styles.css">
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script src="site/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="header-inner">
+        <a class="wordmark" href="#top" aria-label="Survey home">
+          <span class="wordmark-mark" aria-hidden="true">
+            <span class="mark-read"></span>
+            <span class="mark-write"></span>
+            <span class="mark-share"></span>
+            <span class="mark-interact"></span>
+          </span>
+          <span>Video × World</span>
+        </a>
+
+        <button class="nav-toggle icon-button" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-nav>
+          <a href="#lens">Lens</a>
+          <a href="#taxonomy">Taxonomy</a>
+          <a href="#map">Map</a>
+          <a href="#papers">Papers</a>
+          <a href="#citation">Citation</a>
+          <a class="nav-github" href="https://github.com/vid-gen/Awesome-Video-World-Model">
+            <i data-lucide="github" aria-hidden="true"></i>
+            GitHub
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <p class="hero-kicker">A survey of video foundation models</p>
+          <h1 id="hero-title">Reading, Writing, Sharing, and Interacting with the World through Video</h1>
+          <p class="hero-subtitle">A unified account of video intelligence through the lens of world modeling.</p>
+          <p class="authors">Meng Luo · Shengqiong Wu · Bobo Li · Hao Fei</p>
+          <p class="affiliations">National University of Singapore · University of Oxford</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#papers">
+              <i data-lucide="library-big" aria-hidden="true"></i>
+              Explore 504 papers
+            </a>
+            <a class="button button-secondary" href="https://github.com/vid-gen/Awesome-Video-World-Model">
+              <i data-lucide="github" aria-hidden="true"></i>
+              Repository
+            </a>
+            <a class="button button-secondary" href="data/references.bib" download>
+              <i data-lucide="download" aria-hidden="true"></i>
+              BibTeX
+            </a>
+          </div>
+          <div class="release-note" role="status">
+            <span class="release-dot" aria-hidden="true"></span>
+            Preprint forthcoming · Literature catalog updated July 2026
+          </div>
+        </div>
+        <a class="hero-next" href="#lens" aria-label="Continue to the world-modeling lens">
+          <i data-lucide="arrow-down" aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="lens section-band" id="lens">
+        <div class="section-inner lens-layout">
+          <div class="section-copy">
+            <p class="section-index">01 · The lens</p>
+            <h2>Video is a trace of a latent temporal world</h2>
+            <p class="section-lead">
+              An observed video is partial, lossy, temporally ordered, and bound to a particular projection. The survey
+              separates this visible trace from the entities, relations, dynamics, and state that produced it.
+            </p>
+            <p>
+              This distinction exposes two different demands. Temporal coherence concerns smooth local transitions in the
+              trace. World consistency concerns persistent entities, relations, and constraints across occlusion, viewpoint
+              change, and long rollouts.
+            </p>
+          </div>
+          <figure class="feature-figure">
+            <button class="figure-button" type="button" data-image-open="assets/figures/four-operations.png" aria-label="Open the four-operations figure">
+              <img
+                src="assets/figures/four-operations.png"
+                alt="Observed video and latent world connected by reading, writing, sharing, and interacting operations."
+                width="1535"
+                height="1024"
+              >
+              <span class="expand-icon" aria-hidden="true"><i data-lucide="maximize-2"></i></span>
+            </button>
+            <figcaption>
+              <span>Figure 1</span>
+              The video-world relation and the four operations used throughout the survey.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="taxonomy section-band" id="taxonomy">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-index">02 · Organizing principle</p>
+            <h2>Four operations, one connected field</h2>
+            <p>
+              The taxonomy follows what a model does to the video-world relation, giving a common frame to literature that is
+              usually reviewed in isolation.
+            </p>
+          </div>
+
+          <div class="operation-grid">
+            <article class="operation operation-read">
+              <div class="operation-heading">
+                <span class="operation-number">01</span>
+                <i data-lucide="scan-eye" aria-hidden="true"></i>
+              </div>
+              <h3>Reading</h3>
+              <p>Infer world content, structure, dynamics, and evidence from an observed video trace.</p>
+              <ul>
+                <li>Understanding and benchmarks</li>
+                <li>Representation learning</li>
+                <li>Video-LLMs and agents</li>
+              </ul>
+              <a href="#papers" data-operation-link="reading">Browse reading papers <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="operation operation-write">
+              <div class="operation-heading">
+                <span class="operation-number">02</span>
+                <i data-lucide="clapperboard" aria-hidden="true"></i>
+              </div>
+              <h3>Writing</h3>
+              <p>Render coherent video traces from text, images, audio, geometry, motion, or other conditions.</p>
+              <ul>
+                <li>Latent video representations</li>
+                <li>Generative paradigms</li>
+                <li>Control and editing</li>
+              </ul>
+              <a href="#papers" data-operation-link="writing">Browse writing papers <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="operation operation-share">
+              <div class="operation-heading">
+                <span class="operation-number">03</span>
+                <i data-lucide="combine" aria-hidden="true"></i>
+              </div>
+              <h3>Sharing</h3>
+              <p>Couple understanding and generation through common representations, parameters, interfaces, or objectives.</p>
+              <ul>
+                <li>Unified architectures</li>
+                <li>Co-learning objectives</li>
+                <li>Cross-capability evaluation</li>
+              </ul>
+              <a href="#papers" data-operation-link="sharing">Browse sharing papers <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="operation operation-interact">
+              <div class="operation-heading">
+                <span class="operation-number">04</span>
+                <i data-lucide="waypoints" aria-hidden="true"></i>
+              </div>
+              <h3>Interacting</h3>
+              <p>Evolve represented state under actions or conditions through online, open-loop, or latent rollout.</p>
+              <ul>
+                <li>Type A, B, and C interfaces</li>
+                <li>Memory and controllability</li>
+                <li>Planning and evaluation</li>
+              </ul>
+              <a href="#papers" data-operation-link="interacting">Browse interacting papers <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="map section-band" id="map">
+        <div class="section-inner">
+          <div class="section-heading heading-row">
+            <div>
+              <p class="section-index">03 · Evolution</p>
+              <h2>From video recognition to interactive world models</h2>
+            </div>
+            <p>
+              The four branches track how the field moved from extracting information from clips to generating, unifying,
+              and actively rolling out persistent worlds.
+            </p>
+          </div>
+          <figure class="wide-figure">
+            <button class="figure-button" type="button" data-image-open="assets/figures/field-timeline.png" aria-label="Open the field timeline figure">
+              <img
+                src="assets/figures/field-timeline.png"
+                alt="Timeline of representative work in reading, writing, sharing, and interacting with the world through video."
+                width="2062"
+                height="1457"
+                loading="lazy"
+              >
+              <span class="expand-icon" aria-hidden="true"><i data-lucide="maximize-2"></i></span>
+            </button>
+            <figcaption>
+              <span>Figure 2</span>
+              Representative trajectories across the four survey operations. Dates and venues follow the cited records.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="methods section-band" id="methods">
+        <div class="section-inner">
+          <div class="section-heading heading-row">
+            <div>
+              <p class="section-index">04 · Technical maps</p>
+              <h2>Key design spaces at a glance</h2>
+            </div>
+            <p>
+              These figures summarize the main method families without replacing the distinctions and evidence developed in
+              the paper.
+            </p>
+          </div>
+
+          <div class="figure-gallery">
+            <figure class="gallery-item gallery-wide">
+              <button class="figure-button" type="button" data-image-open="assets/figures/representation-learning.png" aria-label="Open the representation-learning figure">
+                <img
+                  src="assets/figures/representation-learning.png"
+                  alt="Four objective families for video representation learning."
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                >
+                <span class="expand-icon" aria-hidden="true"><i data-lucide="maximize-2"></i></span>
+              </button>
+              <figcaption><span>Reading</span> Self-supervised objectives for transferable video encoders.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <button class="figure-button" type="button" data-image-open="assets/figures/latent-representations.png" aria-label="Open the latent-representations figure">
+                <img
+                  src="assets/figures/latent-representations.png"
+                  alt="Continuous, discrete, and hybrid latent representations for video generation."
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                >
+                <span class="expand-icon" aria-hidden="true"><i data-lucide="maximize-2"></i></span>
+              </button>
+              <figcaption><span>Writing</span> Representation substrates for video generation.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <button class="figure-button" type="button" data-image-open="assets/figures/generation-paradigms.png" aria-label="Open the generation-paradigms figure">
+                <img
+                  src="assets/figures/generation-paradigms.png"
+                  alt="Diffusion, autoregressive, flow, language-assisted, and agentic video generation paradigms."
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                >
+                <span class="expand-icon" aria-hidden="true"><i data-lucide="maximize-2"></i></span>
+              </button>
+              <figcaption><span>Writing</span> Base generation paradigms and system-level organization.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <button class="figure-button" type="button" data-image-open="assets/figures/control-strategies.png" aria-label="Open the control-strategies figure">
+                <img
+                  src="assets/figures/control-strategies.png"
+                  alt="Six ways to inject control into a video generation model."
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                >
+                <span class="expand-icon" aria-hidden="true"><i data-lucide="maximize-2"></i></span>
+              </button>
+              <figcaption><span>Writing</span> Where and how control enters the generation pipeline.</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+              <button class="figure-button" type="button" data-image-open="assets/figures/unified-architectures.png" aria-label="Open the unified-architectures figure">
+                <img
+                  src="assets/figures/unified-architectures.png"
+                  alt="Four architecture patterns for unified video understanding and generation."
+                  width="1491"
+                  height="1055"
+                  loading="lazy"
+                >
+                <span class="expand-icon" aria-hidden="true"><i data-lucide="maximize-2"></i></span>
+              </button>
+              <figcaption><span>Sharing</span> Four patterns for unifying understanding and generation.</figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-wide">
+              <button class="figure-button" type="button" data-image-open="assets/figures/world-model-interfaces.png" aria-label="Open the world-model-interfaces figure">
+                <img
+                  src="assets/figures/world-model-interfaces.png"
+                  alt="Type A online, Type B open-loop, and Type C latent-state video world-model interfaces."
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                >
+                <span class="expand-icon" aria-hidden="true"><i data-lucide="maximize-2"></i></span>
+              </button>
+              <figcaption><span>Interacting</span> The transition interfaces of Type A, B, and C video world models.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="papers section-band" id="papers">
+        <div class="section-inner">
+          <div class="section-heading heading-row">
+            <div>
+              <p class="section-index">05 · Literature explorer</p>
+              <h2>Browse the cited literature</h2>
+            </div>
+            <p>
+              Search the complete manuscript bibliography and narrow it by operation, survey section, or publication year.
+            </p>
+          </div>
+
+          <div class="paper-tools" aria-label="Paper filters">
+            <label class="search-field">
+              <span class="sr-only">Search papers</span>
+              <i data-lucide="search" aria-hidden="true"></i>
+              <input type="search" placeholder="Search title, author, or key" autocomplete="off" data-search>
+              <button class="search-clear icon-button" type="button" aria-label="Clear search" data-search-clear hidden>
+                <i data-lucide="x" aria-hidden="true"></i>
+              </button>
+            </label>
+
+            <div class="operation-filter" role="group" aria-label="Filter by survey operation">
+              <button type="button" class="is-active" data-operation="all" aria-pressed="true">All</button>
+              <button type="button" data-operation="foundations" aria-pressed="false">Foundations</button>
+              <button type="button" data-operation="reading" aria-pressed="false">Reading</button>
+              <button type="button" data-operation="writing" aria-pressed="false">Writing</button>
+              <button type="button" data-operation="sharing" aria-pressed="false">Sharing</button>
+              <button type="button" data-operation="interacting" aria-pressed="false">Interacting</button>
+              <button type="button" data-operation="frontiers" aria-pressed="false">Frontiers</button>
+            </div>
+
+            <div class="select-filters">
+              <label>
+                <span>Section</span>
+                <select data-section>
+                  <option value="all">All sections</option>
+                </select>
+              </label>
+              <label>
+                <span>Year</span>
+                <select data-year>
+                  <option value="all">All years</option>
+                </select>
+              </label>
+              <label>
+                <span>Sort</span>
+                <select data-sort>
+                  <option value="newest">Newest first</option>
+                  <option value="oldest">Oldest first</option>
+                  <option value="title">Title A–Z</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="paper-summary">
+            <p data-result-count aria-live="polite">Loading literature catalog…</p>
+            <a href="data/references.bib" download>
+              <i data-lucide="download" aria-hidden="true"></i>
+              Complete BibTeX
+            </a>
+          </div>
+
+          <div class="paper-list" data-paper-list aria-busy="true"></div>
+          <div class="empty-state" data-empty hidden>
+            <i data-lucide="file-search" aria-hidden="true"></i>
+            <h3>No matching papers</h3>
+            <p>Try a broader term or reset one of the filters.</p>
+          </div>
+          <button class="button button-more" type="button" data-load-more hidden>
+            Show more papers
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="citation section-band" id="citation">
+        <div class="section-inner citation-layout">
+          <div>
+            <p class="section-index">06 · Use and contribute</p>
+            <h2>Keep the map current</h2>
+            <p>
+              Corrections and suggestions are welcome when a work is technically relevant and representative of its
+              direction. The manuscript citation will be published here with the preprint.
+            </p>
+            <div class="citation-actions">
+              <a class="button button-primary" href="https://github.com/vid-gen/Awesome-Video-World-Model/issues/new/choose">
+                <i data-lucide="git-pull-request-create" aria-hidden="true"></i>
+                Suggest a paper
+              </a>
+              <a class="button button-secondary" href="https://github.com/vid-gen/Awesome-Video-World-Model/blob/main/CONTRIBUTING.md">
+                <i data-lucide="file-text" aria-hidden="true"></i>
+                Contribution guide
+              </a>
+            </div>
+          </div>
+          <div class="citation-status">
+            <p class="status-label">Survey citation</p>
+            <p class="status-title">Preprint forthcoming</p>
+            <p>Formal title, author order, and repository metadata are already fixed. Publication fields will be added after release.</p>
+            <a href="data/references.bib" download>Download the cited bibliography <i data-lucide="arrow-down-to-line" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>Video Foundation Models through the World-Modeling Lens</p>
+        <div>
+          <a href="https://github.com/vid-gen/Awesome-Video-World-Model">GitHub</a>
+          <a href="data/references.bib">BibTeX</a>
+          <a href="#top">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="image-dialog" data-image-dialog>
+      <button class="dialog-close icon-button" type="button" aria-label="Close enlarged figure" data-image-close>
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+      <img src="" alt="" data-dialog-image>
+    </dialog>
+  </body>
+</html>
