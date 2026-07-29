@@ -6,7 +6,7 @@
 
 **Meng Luo · Shengqiong Wu · Bobo Li · Hao Fei**
 
-[![Project Website](https://img.shields.io/badge/Project-Website-18232a?style=flat-square)](https://vid-gen.github.io/Awesome-Video-World-Model/)
+[![Project Website](https://img.shields.io/badge/Project-Website-18232a?style=flat-square)](https://eurekaleo.github.io/Awesome-Video-World-Model/)
 [![Paper Collection](https://img.shields.io/badge/Papers-504-1c7ea6?style=flat-square)](#paper-collection)
 [![BibTeX](https://img.shields.io/badge/BibTeX-504-cf5b2b?style=flat-square)](data/references.bib)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-198974?style=flat-square)](CONTRIBUTING.md)
@@ -24,7 +24,7 @@ between an observed video trace and its latent world: **Reading**, **Writing**,
 
 The catalog contains **504 references actually cited by the manuscript**.
 Every entry is assigned from its location in the LaTeX source, and papers used across
-multiple themes remain cross-indexed in the [interactive explorer](https://vid-gen.github.io/Awesome-Video-World-Model/#papers).
+multiple themes remain cross-indexed in the [interactive explorer](https://eurekaleo.github.io/Awesome-Video-World-Model/#papers).
 
 ## News
 
@@ -46,7 +46,7 @@ multiple themes remain cross-indexed in the [interactive explorer](https://vid-g
 
 ## Contents
 
-- [Explore the collection](https://vid-gen.github.io/Awesome-Video-World-Model/#papers)
+- [Explore the collection](https://eurekaleo.github.io/Awesome-Video-World-Model/#papers)
 - [Download the complete BibTeX file](data/references.bib)
 - [Foundations](#foundations)
 - [Reading the World](#reading-the-world)

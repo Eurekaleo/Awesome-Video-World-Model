@@ -84,7 +84,7 @@ def main() -> None:
         "",
         "**Meng Luo · Shengqiong Wu · Bobo Li · Hao Fei**",
         "",
-        "[![Project Website](https://img.shields.io/badge/Project-Website-18232a?style=flat-square)](https://vid-gen.github.io/Awesome-Video-World-Model/)",
+        "[![Project Website](https://img.shields.io/badge/Project-Website-18232a?style=flat-square)](https://eurekaleo.github.io/Awesome-Video-World-Model/)",
         f"[![Paper Collection](https://img.shields.io/badge/Papers-{metadata['paperCount']}-1c7ea6?style=flat-square)](#paper-collection)",
         f"[![BibTeX](https://img.shields.io/badge/BibTeX-{metadata['paperCount']}-cf5b2b?style=flat-square)](data/references.bib)",
         "[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-198974?style=flat-square)](CONTRIBUTING.md)",
@@ -102,7 +102,7 @@ def main() -> None:
         "",
         f"The catalog contains **{metadata['paperCount']} references actually cited by the manuscript**.",
         "Every entry is assigned from its location in the LaTeX source, and papers used across",
-        "multiple themes remain cross-indexed in the [interactive explorer](https://vid-gen.github.io/Awesome-Video-World-Model/#papers).",
+        "multiple themes remain cross-indexed in the [interactive explorer](https://eurekaleo.github.io/Awesome-Video-World-Model/#papers).",
         "",
         "## News",
         "",
@@ -124,7 +124,7 @@ def main() -> None:
         "",
         "## Contents",
         "",
-        "- [Explore the collection](https://vid-gen.github.io/Awesome-Video-World-Model/#papers)",
+        "- [Explore the collection](https://eurekaleo.github.io/Awesome-Video-World-Model/#papers)",
         "- [Download the complete BibTeX file](data/references.bib)",
     ]
     for _, label, _ in OPERATIONS:
