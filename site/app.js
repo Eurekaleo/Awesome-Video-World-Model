@@ -20,6 +20,7 @@ const operationLabels = {
 
 const elements = {
   header: document.querySelector("[data-header]"),
+  progress: document.querySelector("[data-scroll-progress]"),
   nav: document.querySelector("[data-nav]"),
   navToggle: document.querySelector("[data-nav-toggle]"),
   search: document.querySelector("[data-search]"),
@@ -278,9 +279,47 @@ function setupNavigation() {
   elements.nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeNavigation);
   });
-  window.addEventListener("scroll", () => {
+  const updateScrollChrome = () => {
     elements.header.classList.toggle("is-scrolled", window.scrollY > 8);
-  });
+    if (elements.progress) {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
+      elements.progress.style.transform = `scaleX(${progress})`;
+    }
+  };
+  window.addEventListener("scroll", updateScrollChrome, { passive: true });
+  updateScrollChrome();
+}
+
+function setupReveals() {
+  if (
+    !("IntersectionObserver" in window) ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    return;
+  }
+
+  const targets = [
+    ...document.querySelectorAll(
+      ".section-copy, .section-heading, .feature-figure, .operation, .wide-figure, .gallery-item, .paper-tools, .citation-layout > *",
+    ),
+  ];
+  targets.forEach((target) => target.classList.add("reveal-item"));
+  document.body.classList.add("motion-ready");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -8%", threshold: 0.08 },
+  );
+  targets.forEach((target) => observer.observe(target));
 }
 
 function setupFilters() {
@@ -343,6 +382,7 @@ function setupFigureDialog() {
 }
 
 setupNavigation();
+setupReveals();
 setupFilters();
 setupFigureDialog();
 loadCatalog();

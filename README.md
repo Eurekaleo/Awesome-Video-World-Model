@@ -4,9 +4,10 @@
 
 ### A Survey of Video Foundation Models through the Lens of World Modeling
 
-**Meng Luo · Shengqiong Wu · Bobo Li · Hao Fei**
+**Meng Luo · Shengqiong Wu · Bobo Li · Mong-Li Lee · Wynne Hsu · Ziwei Liu · Shuicheng Yan · Philip Torr · Ming-Hsuan Yang · Hao Fei**
 
 [![Project Website](https://img.shields.io/badge/Project-Website-18232a?style=flat-square)](https://eurekaleo.github.io/Awesome-Video-World-Model/)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-191c24?style=flat-square&logo=github)](https://github.com/Eurekaleo/Awesome-Video-World-Model)
 [![Paper Collection](https://img.shields.io/badge/Papers-504-1c7ea6?style=flat-square)](#paper-collection)
 [![BibTeX](https://img.shields.io/badge/BibTeX-504-cf5b2b?style=flat-square)](data/references.bib)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-198974?style=flat-square)](CONTRIBUTING.md)

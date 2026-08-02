@@ -71,6 +71,7 @@ def main() -> None:
     payload = json.loads(DATA.read_text(encoding="utf-8"))
     papers = payload["papers"]
     metadata = payload["metadata"]
+    author_line = " · ".join(metadata["authors"])
     grouped: dict[str, dict[str, list[dict]]] = defaultdict(lambda: defaultdict(list))
     for paper in papers:
         grouped[paper["operation"]][paper["primarySection"]].append(paper)
@@ -82,9 +83,10 @@ def main() -> None:
         "",
         "### A Survey of Video Foundation Models through the Lens of World Modeling",
         "",
-        "**Meng Luo · Shengqiong Wu · Bobo Li · Hao Fei**",
+        f"**{author_line}**",
         "",
         "[![Project Website](https://img.shields.io/badge/Project-Website-18232a?style=flat-square)](https://eurekaleo.github.io/Awesome-Video-World-Model/)",
+        "[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-191c24?style=flat-square&logo=github)](https://github.com/Eurekaleo/Awesome-Video-World-Model)",
         f"[![Paper Collection](https://img.shields.io/badge/Papers-{metadata['paperCount']}-1c7ea6?style=flat-square)](#paper-collection)",
         f"[![BibTeX](https://img.shields.io/badge/BibTeX-{metadata['paperCount']}-cf5b2b?style=flat-square)](data/references.bib)",
         "[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-198974?style=flat-square)](CONTRIBUTING.md)",

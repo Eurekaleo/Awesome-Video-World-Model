@@ -7,8 +7,10 @@
       name="description"
       content="A survey and curated literature collection for video foundation models through the lens of world modeling."
     >
-    <meta name="theme-color" content="#18232a">
+    <meta name="theme-color" content="#f7f1e6">
+    <link rel="canonical" href="https://eurekaleo.github.io/Awesome-Video-World-Model/">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eurekaleo.github.io/Awesome-Video-World-Model/">
     <meta
       property="og:title"
       content="Reading, Writing, Sharing, and Interacting with the World through Video"
@@ -17,14 +19,37 @@
       property="og:description"
       content="Explore 504 references across video understanding, generation, unified models, and video world models."
     >
-    <meta property="og:image" content="assets/figures/four-operations.png">
+    <meta property="og:image" content="assets/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta
+      property="og:image:alt"
+      content="Video × World survey title beside an abstract latent-world and video-trace composition."
+    >
+    <meta name="twitter:card" content="summary_large_image">
+    <meta
+      name="twitter:title"
+      content="Reading, Writing, Sharing, and Interacting with the World through Video"
+    >
+    <meta
+      name="twitter:description"
+      content="A survey of video foundation models through the lens of world modeling."
+    >
+    <meta name="twitter:image" content="assets/og.png">
     <title>Video Foundation Models through the World-Modeling Lens</title>
     <link rel="icon" href="assets/site-icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="site/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,300..600&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="site/styles.css?v=20260801">
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-    <script src="site/app.js" defer></script>
+    <script src="site/app.js?v=20260801" defer></script>
   </head>
   <body>
+    <div class="site-grain" aria-hidden="true"></div>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" data-header>
@@ -55,35 +80,88 @@
           </a>
         </nav>
       </div>
+      <span class="scroll-progress" data-scroll-progress aria-hidden="true"></span>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="hero-orbit hero-orbit-one"></span>
+          <span class="hero-orbit hero-orbit-two"></span>
+          <span class="hero-signal hero-signal-one"></span>
+          <span class="hero-signal hero-signal-two"></span>
+        </div>
         <div class="hero-inner">
-          <p class="hero-kicker">A survey of video foundation models</p>
-          <h1 id="hero-title">Reading, Writing, Sharing, and Interacting with the World through Video</h1>
-          <p class="hero-subtitle">A unified account of video intelligence through the lens of world modeling.</p>
-          <p class="authors">Meng Luo · Shengqiong Wu · Bobo Li · Hao Fei</p>
-          <p class="affiliations">National University of Singapore · University of Oxford</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#papers">
-              <i data-lucide="library-big" aria-hidden="true"></i>
-              Explore 504 papers
-            </a>
-            <a class="button button-secondary" href="https://github.com/Eurekaleo/Awesome-Video-World-Model">
-              <i data-lucide="github" aria-hidden="true"></i>
-              Repository
-            </a>
-            <a class="button button-secondary" href="data/references.bib" download>
-              <i data-lucide="download" aria-hidden="true"></i>
-              BibTeX
-            </a>
+          <div class="hero-copy">
+            <p class="hero-kicker"><span>Field guide · 2026</span> A survey of video foundation models</p>
+            <h1 id="hero-title">
+              <span>Reading, Writing,</span>
+              <span>Sharing, and Interacting</span>
+              <span>with the <em>World</em> through Video</span>
+            </h1>
+            <p class="hero-subtitle">
+              A unified account of video intelligence through the lens of world modeling.
+            </p>
+            <div class="hero-credits">
+              <p class="authors">Meng Luo · Shengqiong Wu · Bobo Li · Mong-Li Lee · Wynne Hsu · Ziwei Liu · Shuicheng Yan · Philip Torr · Ming-Hsuan Yang · Hao Fei</p>
+              <p class="affiliations">NUS · University of Oxford · NTU · UC Merced</p>
+            </div>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#papers">
+                <i data-lucide="library-big" aria-hidden="true"></i>
+                Explore 504 papers
+              </a>
+              <a class="button button-secondary" href="https://github.com/Eurekaleo/Awesome-Video-World-Model">
+                <i data-lucide="github" aria-hidden="true"></i>
+                Repository
+              </a>
+              <a class="button button-secondary" href="data/references.bib" download>
+                <i data-lucide="download" aria-hidden="true"></i>
+                BibTeX
+              </a>
+            </div>
+            <div class="release-note" role="status">
+              <span class="release-dot" aria-hidden="true"></span>
+              Preprint forthcoming · Literature catalog updated July 2026
+            </div>
           </div>
-          <div class="release-note" role="status">
-            <span class="release-dot" aria-hidden="true"></span>
-            Preprint forthcoming · Literature catalog updated July 2026
-          </div>
+
+          <aside class="hero-stage" aria-label="The video-world relation">
+            <div class="hero-stage-heading">
+              <div>
+                <span class="stage-label">World / trace observatory</span>
+                <p>One latent world. Four operations on its visible trace.</p>
+              </div>
+              <span class="stage-status"><i aria-hidden="true"></i> Map online</span>
+            </div>
+            <button
+              class="hero-figure figure-button"
+              type="button"
+              data-image-open="assets/figures/four-operations.png"
+              aria-label="Open the video-world relation figure"
+            >
+              <img
+                src="assets/figures/four-operations.png"
+                alt="Observed video and latent world connected by reading, writing, sharing, and interacting operations."
+                width="1535"
+                height="1024"
+              >
+              <span class="hero-figure-scan" aria-hidden="true"></span>
+              <span class="expand-icon" aria-hidden="true"><i data-lucide="maximize-2"></i></span>
+            </button>
+            <div class="hero-operations" aria-label="Browse papers by operation">
+              <a href="#papers" data-operation-link="reading"><span>01</span> Reading</a>
+              <a href="#papers" data-operation-link="writing"><span>02</span> Writing</a>
+              <a href="#papers" data-operation-link="sharing"><span>03</span> Sharing</a>
+              <a href="#papers" data-operation-link="interacting"><span>04</span> Interacting</a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="hero-register" aria-label="Survey at a glance">
+          <p><strong>504</strong><span>Cited works</span></p>
+          <p><strong>04</strong><span>Operations</span></p>
+          <p><strong>01</strong><span>World-modeling lens</span></p>
         </div>
         <a class="hero-next" href="#lens" aria-label="Continue to the world-modeling lens">
           <i data-lucide="arrow-down" aria-hidden="true"></i>
@@ -93,8 +171,8 @@
       <section class="lens section-band" id="lens">
         <div class="section-inner lens-layout">
           <div class="section-copy">
-            <p class="section-index">01 · The lens</p>
-            <h2>Video is a trace of a latent temporal world</h2>
+            <p class="section-index"><span>01</span> The lens</p>
+            <h2>Video is a trace of a <em>latent temporal world</em></h2>
             <p class="section-lead">
               An observed video is partial, lossy, temporally ordered, and bound to a particular projection. The survey
               separates this visible trace from the entities, relations, dynamics, and state that produced it.
@@ -104,6 +182,12 @@
               trace. World consistency concerns persistent entities, relations, and constraints across occlusion, viewpoint
               change, and long rollouts.
             </p>
+            <div class="trace-properties" aria-label="Properties of an observed video trace">
+              <span><b>01</b> Partial</span>
+              <span><b>02</b> Lossy</span>
+              <span><b>03</b> Temporally ordered</span>
+              <span><b>04</b> Single projection</span>
+            </div>
           </div>
           <figure class="feature-figure">
             <button class="figure-button" type="button" data-image-open="assets/figures/four-operations.png" aria-label="Open the four-operations figure">
@@ -126,8 +210,8 @@
       <section class="taxonomy section-band" id="taxonomy">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="section-index">02 · Organizing principle</p>
-            <h2>Four operations, one connected field</h2>
+            <p class="section-index"><span>02</span> Organizing principle</p>
+            <h2>Four operations, <em>one connected field</em></h2>
             <p>
               The taxonomy follows what a model does to the video-world relation, giving a common frame to literature that is
               usually reviewed in isolation.
@@ -202,8 +286,8 @@
         <div class="section-inner">
           <div class="section-heading heading-row">
             <div>
-              <p class="section-index">03 · Evolution</p>
-              <h2>From video recognition to interactive world models</h2>
+              <p class="section-index"><span>03</span> Evolution</p>
+              <h2>From video recognition to <em>interactive world models</em></h2>
             </div>
             <p>
               The four branches track how the field moved from extracting information from clips to generating, unifying,
@@ -233,8 +317,8 @@
         <div class="section-inner">
           <div class="section-heading heading-row">
             <div>
-              <p class="section-index">04 · Technical maps</p>
-              <h2>Key design spaces at a glance</h2>
+              <p class="section-index"><span>04</span> Technical maps</p>
+              <h2>Key design spaces <em>at a glance</em></h2>
             </div>
             <p>
               These figures summarize the main method families without replacing the distinctions and evidence developed in
@@ -334,8 +418,8 @@
         <div class="section-inner">
           <div class="section-heading heading-row">
             <div>
-              <p class="section-index">05 · Literature explorer</p>
-              <h2>Browse the cited literature</h2>
+              <p class="section-index"><span>05</span> Literature explorer</p>
+              <h2>Browse the <em>cited literature</em></h2>
             </div>
             <p>
               Search the complete manuscript bibliography and narrow it by operation, survey section, or publication year.
@@ -410,8 +494,8 @@
       <section class="citation section-band" id="citation">
         <div class="section-inner citation-layout">
           <div>
-            <p class="section-index">06 · Use and contribute</p>
-            <h2>Keep the map current</h2>
+            <p class="section-index"><span>06</span> Use and contribute</p>
+            <h2>Keep the map <em>current</em></h2>
             <p>
               Corrections and suggestions are welcome when a work is technically relevant and representative of its
               direction. The manuscript citation will be published here with the preprint.
