@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Browse the current list
+    url: https://github.com/Eurekaleo/Awesome-Video-World-Model#literature
+    about: Search the literature directly in the repository before suggesting a paper.
